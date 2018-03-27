@@ -6,13 +6,13 @@ Pretendo implementá-lo em alguma aplicação web e/ou app mobile máximo *user 
 
 # Está organizado em
 
-    * Artigo - O projeto escrito
-    * Figuras - Listas de figuras utilizadas
-    * Códigos - Códigos utilizados para manipulação do banco de dados
-    
-# Tarefas
+* Artigo - O projeto escrito
+* Figuras - Listas de figuras utilizadas
+* Códigos - Códigos utilizados para manipulação do banco de dados
 
-- [] **iss001** - Passar a parte escrita para conteúdo markdown.
+# Tarefas
+- [ ] **iss001** - Passar a parte escrita para conteúdo markdown.
+
 
 # Referências úteis
 
