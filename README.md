@@ -6,15 +6,16 @@ Pretendo implementá-lo em alguma aplicação web e/ou app mobile máximo *user 
 
 # Está organizado em
 
-* Artigo - O projeto escrito
+* Artigo - O projeto escrito, em arquivos .tex
 * Figuras - Listas de figuras utilizadas
 * Códigos - Códigos utilizados para manipulação do banco de dados
 
 # Tarefas
-- [ ] **iss001** - Passar a parte escrita para conteúdo markdown.
+- [ ] **iss001** - Passar a parte escrita para latex.
 
 
 # Referências úteis
+
 
 # Contatos
 
