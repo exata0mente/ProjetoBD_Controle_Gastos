@@ -1,0 +1,66 @@
+codigo,descricao,codigo_macro
+R1,Salário  / Adiantamento ,R 
+R2,Férias ,R 
+R3,13º salário ,R 
+R4,Aposentadoria ,R 
+R5,"Receita extra (aluguel, restituição IR) ",R 
+R6,Outras Receitas ,R 
+A1,Supermercado ,A 
+A2,Feira  / Sacolão ,A 
+A3,Padaria ,A 
+A4,Refeição fora de casa ,A 
+A5,"Outros (café, água, sorvetes, etc) ",A 
+M1,Prestação /Aluguel de imóvel ,M 
+M2,Condomínio ,M 
+M3,Consumo de água ,M 
+M4,Serviço de limpeza( diarista ou mensalista) ,M 
+M5,Energia Elétrica ,M 
+M6,Gás ,M 
+M7,IPTU ,M 
+M8,Decoração da casa ,M 
+M9,Manutenção / Reforma da casa ,M 
+M10,Celular ,M 
+M11,Telefone fixo ,M 
+M12,Internet / TV a cabo ,M 
+E1,Matricula Escolar/ Mensalidade  ,E 
+E2,Material Escolar ,E 
+E3,Outros cursos ,E 
+E4,Creche ,E 
+C1,Ração  ,C 
+C2,Banho / Tosa ,C 
+C3,Veterinário / medicamento ,C 
+C4,"Outros (acessórios, brinquedos, hotel, dog walker) ",C 
+S1,Plano de saúde ,S 
+S2,Medicamentos ,S 
+S3,Dentista ,S 
+S4,Terapia / Psicólogo  / Acupuntura ,S 
+S5,Médicos/Exames fora do plano de saúde ,S 
+S6,Academia / Tratamento Estético ,S 
+T1,Ônibus / Metrô ,T 
+T2,Taxi ,T 
+T3,Combustível ,T 
+T4,Estacionamento ,T 
+T5,Seguro Auto ,T 
+T6,Manutenção / Lavagem / Troca de óleo ,T 
+T7,Licenciamento ,T 
+T8,Pedágio ,T 
+T9,IPVA ,T 
+P1,Vestuário / Calçados / Acessórios ,P 
+P2,Cabeleireiro / Manicure / Higiene pessoal ,P 
+P3,Presentes  ,P 
+P4,Outros   ,P 
+P5,Eletrônicos ,P 
+L1,Cinema / Teatro / Shows ,L 
+L2,Livros / Revistas / Cd´s  ,L 
+L3,Clube / Parques / Casa Noturna ,L 
+L4,Viagens  ,L 
+L5,Restaurantes / Bares / Festas ,L 
+F1,Empréstimos ,F 
+F2,Seguros (vida/residencial) ,F 
+F3,Previdência privada ,F 
+F4,Prévia do Cartão de Crédito ,F 
+F5,Tarifas bancárias ,F 
+F6,Financiamento de veículo ,F 
+F7,Pagamento da fatura do cartão de crédito ,F 
+F8,Imposto de Renda a Pagar  ,F 
+F9,Saque ,F 

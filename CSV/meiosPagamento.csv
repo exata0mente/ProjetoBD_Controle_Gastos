@@ -1,0 +1,7 @@
+codigo,descricao,modificador
+DP,Depósito,+
+DB,Débito,-
+CC,Cartão de Crédito,*
+DI,Dinheiro,-
+SQ,Saque,-
+TR,Transferência,-
