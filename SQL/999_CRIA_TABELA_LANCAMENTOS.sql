@@ -1,14 +1,12 @@
 -- Nesta tabela será registrado todos os lançamentos
 CREATE TABLE lancamentos(
-  data_lancamento        DATE NOT NULL,
-  descricao              VARCHAR(100),
-  codigo_lancamento      VARCHAR(3) NOT NULL,
-  codigo_meio_pgto       VARCHAR(3) NOT NULL,
-  codigo_cartao          NUMBER(3) NOT NULL,
+  data_lancamento        TEXT NOT NULL,
+  descricao              TEXT,
+  codigo_lancamento      TEXT NOT NULL,
+  codigo_cartao          INTEGER NOT NULL,
   valor                  REAL NOT NULL,
-  quantidade_parcelas    NUMBER(2),
-  data_inclusao          DATE NOT NULL,
+  quantidade_parcelas    INTEGER DEFAULT 0,
+  data_inclusao          TEXT NOT NULL,
   FOREIGN KEY (codigo_lancamento) REFERENCES tipoLancamentoMicro (codigo),
-  FOREIGN KEY (codigo_meio_pgto) REFERENCES meiosPagamento (codigo),
   FOREIGN KEY (codigo_cartao) REFERENCES cartao (codigo)
 );
