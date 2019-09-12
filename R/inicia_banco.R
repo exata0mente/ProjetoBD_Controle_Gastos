@@ -1,4 +1,11 @@
 inicia_banco <- function(nome_banco = "Planejamento.db"){
+  
+  require('dplyr')
+  require('readr')
+  require('RSQLite')
+  require('lubridate')
+
+  
   if(file.exists(paste0(getwd(), "/", nome_banco))){
     message(paste0("Iniciando o banco ", nome_banco, "."))
     con <- dbConnect(drv = RSQLite::SQLite(), dbname = nome_banco)
