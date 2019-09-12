@@ -1,29 +1,50 @@
-valida_arquivo_lancamento <- function(nome_arquivo = vector()){
+valida_arquivo_importacao <- function(df = csv){
   
-  tmp <- readr::read_csv(nome_arquivo, n_max = 500, col_types = "cccccc")
-  erro <- list()
-  safe_date <- purrr::safely(lubridate::is.Date, otherwise = FALSE)
+  codigos_lancamento <- dbReadTable(srv, 'tipoLancamentoMicro') %>% as_tibble()
+  check <- FALSE
+  ## Validando o campo de data
+  tryCatch({
+    df$data_lancamento %>% dmy()
+  }, 
+  error = function(e){
+    message(paste0('Problemas com o campo de data!: ',e))
+    check <<- TRUE
+  },
+  warning = function(e) {
+    message(paste0('Problemas com o campo de data!: ',e))
+    check <<- TRUE
+  }
+  )
   
-  if(ncol(tmp) != 6)
-    erro$quantida_colunas <- "Atenção! Número de colunas inválido! Considera exportar um modelo através da função exporta_planilha_modelo()"
+  ## Verifica se há algum código que não existe na tabela do banco
+  tmp <- df$codigo_lancamento %in% codigos_lancamento$codigo
   
-  if(!safe_date(tmp$data_lancamento)$result)
-    erro$formato_data <- "Formato de data não reconhecido para a coluna de data de lancamento"
+  if(!prod(tmp)){
+    message('Atenção. Há códigos de lançamento na planilha que não existem em nossa relação de')
+    message('códigos. Iremos substituílos pelo código \'P1\'')
+    #csv[tmp,] %>% print()
+    df$codigo_lancamento[tmp] <- 'P1'
+  }
+  rm(tmp)
+  rm(codigos_lancamento)
   
-  if(tryCatch(
-      {
-      tmp$valor %>%
+  ## Validando o campo de valor
+  tryCatch(
+    {
+      df$valor %>%
         gsub(pattern = "\\.", replacement = "") %>%
         gsub(pattern = ",", replacement = "\\.") %>%
         as.numeric()
-      },
-      error = function(e) TRUE,
-      warning = function(w) TRUE
-    ))
-    erro$formato_numerico <- "Erro no formato númerico da coluna de valores"
+    },
+    error = function(e){
+      message(paste0('Problemas com o campo de valor!: ',e))
+      check <<- TRUE
+    },
+    warning = function(e) {
+      message(paste0('Problemas com o campo de valor!: ',e))
+      check <<- TRUE
+    }
+  )
   
-  if(length(erro) > 0){
-    ### Inserir uma rotina para mostrar todos os erros adicionados à lista
-  }
-  
+  check
 }
